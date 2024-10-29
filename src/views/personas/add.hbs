@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://th.bing.com/th/id/OIP.29jQoZ-PwGSVpi1b-n2NOQHaE8?rs=1&pid=ImgDetMain">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('https://w.wallhaven.cc/full/95/wallhaven-956q2x.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Arial', sans-serif;
+    }
+    .card-body, .card-header {
+      background-image: url('https://w.wallhaven.cc/full/95/wallhaven-956q2x.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .card-body {
+      background-color: rgba(0, 0, 0, 0.3); /* Fondo negro con 30% de opacidad */
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil para separación */
+    }
+    .card-header {
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+      color: #fff; /* Texto en blanco para mejor contraste */
+    }
+    .btn-success {
+      background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 20% de opacidad */
+      border-color: rgba(255, 255, 255, 0.2); /* Borde blanco con 20% de opacidad */
+      color: #fff; /* Texto blanco */
+    }
+    .btn-success:hover {
+      background-color: grey; /* Color del botón al pasar el ratón por encima */
+      border-color: grey; /* Color del borde del botón al pasar el ratón por encima */
+    }
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco con 30% de opacidad */
+      border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco con 50% de opacidad */
+      color: #fff; /* Texto blanco para mejor contraste */
+    }
+    .form-control::placeholder {
+      color: #ccc; /* Color del texto del placeholder */
+    }
+  </style>
+</head>
+<body>
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="card text-center">
+          <div class="card-header">
+            <h3 class="text-uppercase">Agregar una nueva persona</h3>
+          </div>
+          <div class="card-body">
+            <form action="/add" method="post">
+              <div class="input-group mt-2">
+                <label for="name" class="input-group-text">Nombre de la persona</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="Nombre" autofocus required>
+              </div>
+              <div class="input-group mt-2">
+                <label for="lastname" class="input-group-text">Apellido de la persona</label>
+                <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Apellido" required>
+              </div>
+              <div class="input-group mt-2">
+                <label for="age" class="input-group-text">Edad de la persona</label>
+                <input class="form-control" type="number" name="age" id="age" placeholder="0" required>
+              </div>
+              <div class="form-group mt-4 d-grid gap-2">
+                <button class="btn btn-success">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

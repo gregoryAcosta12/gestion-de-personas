@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+      animation: slideIn 8s linear infinite; /* Aumento de la duración a 8 segundos */
+    }
+    .nav-link {
+      color: #f8f9fa !important;
+      transition: color 0.3s ease-in-out;
+    }
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+    .navbar-toggler-icon {
+      animation: rotateIn 0.5s ease-in-out;
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    @keyframes rotateIn {
+      from {
+        transform: rotate(-180deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <b>Creación y manejo de una API</b>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add">Agregar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/list">Lista de personas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
